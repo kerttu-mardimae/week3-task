@@ -27,10 +27,53 @@ html {
     height: 85%;
     border-radius: 1.5rem;
     position: relative;
-    left: -150rem;
-    animation: slide-from-left 3.5s ease-in-out forwards;
     transition: all 1s;
     cursor: pointer;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(224, 200, 200, 0.644);
+    z-index: 2;
+    top: 0;
+    left: 0;
+    text-align: center;
+}
+
+.modal-content {
+    background-color: rgb(2, 1, 31);
+    color: #e8e8f8;
+    margin: 5% auto;
+    padding: 2rem;
+    width: 600px;
+    height: 600px;
+    animation: zoom-in 1s;
+}
+
+@keyframes zoom-in {
+    0% {transform: scale(0);}
+    100% {transform: scale(1);}
+ }
+
+.closeBtn {
+    float: right;
+    cursor: pointer;
+    font-size: 2rem;
+}
+
+.movie-poster-modal {
+    max-width: 100%;
+    max-height: 100%;
+} 
+
+.movie-poster {
+    width: 300px;
+    cursor: pointer;
+    left: -150rem;
+    animation: slide-from-left 3.5s ease-in-out forwards;
 }
 
 @keyframes slide-from-left {
@@ -38,7 +81,7 @@ html {
     100% {left: 0;}
 }
 
-.movie-poster-container img:hover {
+.movie-poster:hover {
     transform: scale(1.1);
     box-shadow: 8px 8px 8px -4px grey;
 }
@@ -114,7 +157,7 @@ html {
 }
 
 footer {
-    margin-top: 45rem;
+    margin-top: 18rem;
     text-align: center;
     color: #777;
 }
